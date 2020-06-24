@@ -3,3 +3,4 @@ C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\bin\
 C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.csproj.CoreCompileInputs.cache
 C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.dll
 C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.pdb
+C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.csprojAssemblyReference.cache

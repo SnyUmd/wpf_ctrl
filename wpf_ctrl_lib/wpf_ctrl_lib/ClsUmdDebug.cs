@@ -113,11 +113,14 @@ namespace UmdCtrl
                 //最初に余りの値をプラス
                 Ctrl.Width += iRemainingWidth;
                 Ctrl.Height += iRemainingHeigh;
+                DoEvents();
+
 
                 for (int i = 0; i < i_loop; i++)
                 {
                     Ctrl.Width += iStepWidth;
                     Ctrl.Height += iStepHeigh;
+                    DoEvents();
                 }
             }
         }
