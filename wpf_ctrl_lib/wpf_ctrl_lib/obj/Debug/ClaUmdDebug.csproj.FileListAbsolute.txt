@@ -1,0 +1,5 @@
+C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\bin\Debug\ClaUmdDebug.dll
+C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\bin\Debug\ClaUmdDebug.pdb
+C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClaUmdDebug.csproj.CoreCompileInputs.cache
+C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClaUmdDebug.dll
+C:\Users\shume\Documents\_umd\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClaUmdDebug.pdb
