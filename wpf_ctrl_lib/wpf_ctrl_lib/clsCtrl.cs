@@ -31,7 +31,7 @@ namespace wpf_ctrl_lib
         // の参照設定が追加で必要となる。
         //
         //***************************************************************
-        public void PerformClick(Button button)
+        public void PerformClick0(Button button)
         {
             if (button == null)
                 throw new ArgumentNullException("button");
@@ -41,7 +41,7 @@ namespace wpf_ctrl_lib
         }
 
         //***************************************************************
-        public void PerformClick2(Button self)
+        public void PerformClick1(Button self)
         {
 
             var peer = new ButtonAutomationPeer(self);
