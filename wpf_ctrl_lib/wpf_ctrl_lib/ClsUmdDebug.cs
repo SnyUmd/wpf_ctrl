@@ -124,6 +124,44 @@ namespace UmdCtrl
                 }
             }
         }
+        //***************************************************************
+        ///
+        public void umdSetCtrlSize_Sub(System.Windows.Controls.Control Ctrl, int i_sub_width, int i_sub_height, bool bl_animation, int i_loop)
+        {
+
+            ★現在のサイズ以上の長さは拒否
+
+            int iStepWidth = 0, iStepHeigh = 0;
+            int iRemainingWidth = 0, iRemainingHeigh = 0;
+
+            if (!bl_animation)//アニメーション無しの時は単純に足して終わり
+            {
+                Ctrl.Width -= i_sub_width;
+                Ctrl.Height -= i_sub_height;
+            }
+            else//アニメーションが必要な時
+            {
+                //ステップ値と余りを取得
+                iStepWidth = i_sub_width / i_loop;
+                iRemainingWidth = i_sub_width % i_loop;
+
+                iStepHeigh = i_sub_height / i_loop;
+                iRemainingHeigh = i_sub_height % i_loop;
+
+                //最初に余りの値をプラス
+                Ctrl.Width -= iRemainingWidth;
+                Ctrl.Height -= iRemainingHeigh;
+                DoEvents();
+
+
+                for (int i = 0; i < i_loop; i++)
+                {
+                    Ctrl.Width -= iStepWidth;
+                    Ctrl.Height -= iStepHeigh;
+                    DoEvents();
+                }
+            }
+        }
 
     }
 }
