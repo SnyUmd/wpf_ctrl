@@ -69,6 +69,11 @@ namespace UmdCtrl
             provider.Invoke();
         }
 
+        //↑perfomeClick***************************************************************
+
+
+
+
         //***************************************************************
         public void umdTextSet(TextBox Txb, string str)
         {
@@ -90,8 +95,9 @@ namespace UmdCtrl
         /// <param name="i_add_height">高さの加算値</param>
         /// <param name="bl_animation">アニメーション（段階的に）</param>
         /// <param name="i_loop">サイズ加算ステップ</param>
+        /// <param name="bl_upper">上へ追加</param>
         //***************************************************************
-        public void umdSetCtrlSize_Add(System.Windows.Controls.Control Ctrl, int i_add_width, int i_add_height, bool bl_animation, int i_loop)
+        public void umdSetCtrlSize_Add(System.Windows.Controls.Control Ctrl, int i_add_width, int i_add_height, bool bl_animation, int i_loop, bool bl_upper)
         {
             int iStepWidth = 0, iStepHeigh = 0;
             int iRemainingWidth = 0, iRemainingHeigh = 0;
@@ -119,45 +125,74 @@ namespace UmdCtrl
                 for (int i = 0; i < i_loop; i++)
                 {
                     Ctrl.Width += iStepWidth;
+                    if (bl_upper)
+                        ;
                     Ctrl.Height += iStepHeigh;
+                    if (bl_upper)
+                        ;
                     DoEvents();
                 }
             }
         }
         //***************************************************************
-        ///
-        public void umdSetCtrlSize_Sub(System.Windows.Controls.Control Ctrl, int i_sub_width, int i_sub_height, bool bl_animation, int i_loop)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Ctrl"></param>
+        /// <param name="i_sub_width"></param>
+        /// <param name="i_sub_height"></param>
+        /// <param name="bl_animation"></param>
+        /// <param name="i_loop"></param>
+        /// <param name="bl_upper"></param>
+        public void umdSetCtrlSize_Sub(System.Windows.Controls.Control Ctrl, int i_sub_width, int i_sub_height, bool bl_animation, int i_loop, bool bl_upper)
         {
-
-            ★現在のサイズ以上の長さは拒否
-
             int iStepWidth = 0, iStepHeigh = 0;
             int iRemainingWidth = 0, iRemainingHeigh = 0;
 
+            bool blWidthOver = false, blHeightOver = false;
+
+            if (Ctrl.Width - 10 <= i_sub_width)
+                blWidthOver = true;
+            if (Ctrl.Height - 10 <= i_sub_height)
+                blHeightOver = true;
+
+
             if (!bl_animation)//アニメーション無しの時は単純に足して終わり
             {
-                Ctrl.Width -= i_sub_width;
-                Ctrl.Height -= i_sub_height;
+                if (!blWidthOver)
+                    Ctrl.Width -= i_sub_width;
+                if (!blHeightOver)
+                    Ctrl.Height -= i_sub_height;
             }
             else//アニメーションが必要な時
             {
-                //ステップ値と余りを取得
-                iStepWidth = i_sub_width / i_loop;
-                iRemainingWidth = i_sub_width % i_loop;
-
-                iStepHeigh = i_sub_height / i_loop;
-                iRemainingHeigh = i_sub_height % i_loop;
-
-                //最初に余りの値をプラス
-                Ctrl.Width -= iRemainingWidth;
-                Ctrl.Height -= iRemainingHeigh;
+                //幅--------------------------------
+                if (!blWidthOver)
+                {
+                    //ステップ値と余りを取得
+                    iStepWidth = i_sub_width / i_loop;
+                    iRemainingWidth = i_sub_width % i_loop;
+                    //最初に余りの値をプラス
+                    Ctrl.Width -= iRemainingWidth;
+                }
+                //高さ------------------------------------
+                if (!blHeightOver)
+                {
+                    //ステップ値と余りを取得
+                    iStepHeigh = i_sub_height / i_loop;
+                    iRemainingHeigh = i_sub_height % i_loop;
+                    //最初に余りの値をプラス
+                    Ctrl.Height -= iRemainingHeigh;
+                }
                 DoEvents();
 
-
+                //アニメーションループ
                 for (int i = 0; i < i_loop; i++)
                 {
-                    Ctrl.Width -= iStepWidth;
-                    Ctrl.Height -= iStepHeigh;
+                    if (!blWidthOver)
+                        Ctrl.Width -= iStepWidth;
+                    if (!blHeightOver)
+                        Ctrl.Height -= iStepHeigh;
                     DoEvents();
                 }
             }
