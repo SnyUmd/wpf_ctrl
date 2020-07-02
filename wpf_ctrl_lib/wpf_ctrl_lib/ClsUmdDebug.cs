@@ -34,7 +34,7 @@ namespace UmdCtrl
 
 
         //***************************************************************
-        //WinFormsでいうPerformClickを実行.
+        //FormのPerformClickと同じものを実行.
         //
         //■参照の追加が必要
         //　PresentationCore
@@ -198,5 +198,33 @@ namespace UmdCtrl
             }
         }
 
+
+
+
+
+
+
+
+        //============================================================================================================================
+        //============================================================================================================================
+        //============================================================================================================================
+        public void umdDebugLogin(System.Windows.Controls.TextBox txb_promoter, System.Windows.Controls.TextBox txb_id, System.Windows.Controls.PasswordBox pwb_pass, System.Windows.Controls.Button btn_rogin)
+        /*
+#if UMD_DEBUG
+using UmdCtrl;
+#endif
+ 
+#if UMD_DEBUG
+            ClsUmdDebug cls_umd_deb = new ClsUmdDebug();
+            cls_umd_deb.umdDebugLogin(textboxPromoterId , textboxLoginId, passwordBoxLoginPassword, buttonSystemUserLogin);
+#else//UMD_DEBUG
+#endif//UMD_DEBUG
+        */
+        {
+            txb_promoter.Text = "tdc";
+            txb_id.Text = "umd";
+            pwb_pass.Password = "umd";
+            PerformClick1(btn_rogin);
+        }
     }
 }

@@ -9,3 +9,9 @@ C:\git\wpf_ctrl_home\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.csprojAssem
 C:\git\wpf_ctrl_home\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.csproj.CoreCompileInputs.cache
 C:\git\wpf_ctrl_home\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.dll
 C:\git\wpf_ctrl_home\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.pdb
+C:\Users\SHUMEDA\Documents\_umd_data\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\bin\Debug\ClsUmdDebug.dll
+C:\Users\SHUMEDA\Documents\_umd_data\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\bin\Debug\ClsUmdDebug.pdb
+C:\Users\SHUMEDA\Documents\_umd_data\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.csprojAssemblyReference.cache
+C:\Users\SHUMEDA\Documents\_umd_data\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.csproj.CoreCompileInputs.cache
+C:\Users\SHUMEDA\Documents\_umd_data\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.dll
+C:\Users\SHUMEDA\Documents\_umd_data\github_umd\wpf_ctrl\wpf_ctrl_lib\wpf_ctrl_lib\obj\Debug\ClsUmdDebug.pdb
