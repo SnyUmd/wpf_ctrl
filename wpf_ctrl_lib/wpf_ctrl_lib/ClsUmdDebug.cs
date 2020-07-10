@@ -144,6 +144,7 @@ namespace UmdCtrl
         /// <param name="bl_animation"></param>
         /// <param name="i_loop"></param>
         /// <param name="bl_upper"></param>
+        //***************************************************************
         public void umdSetCtrlSize_Sub(System.Windows.Controls.Control Ctrl, int i_sub_width, int i_sub_height, bool bl_animation, int i_loop, bool bl_upper)
         {
             int iStepWidth = 0, iStepHeigh = 0;
